@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Canada-Verse — Open ideas. Free minds. A better humanity.</title>
+<meta name="description" content="Canada-Verse is a podcast hosted by Jimmy Lamb from North Vancouver, BC. Open ideas. Free minds. A better humanity.">
+<link rel="canonical" href="https://canadaverse.live/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<style>
+:root{--red:#c8102e;--red2:#e63946;--ink:#0b1026;--ink2:#151b3d;--cream:#fdf8f3;--text:#2a2a35;--muted:#6b6b7b;--green:#1f7a3a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--cream);line-height:1.6}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:absolute;top:0;left:0;right:0;z-index:5}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:1.2rem;text-decoration:none;letter-spacing:.3px}
+.navlinks{display:flex;gap:26px}
+.navlinks a{color:#d9dcf0;text-decoration:none;font-size:.95rem}
+.navlinks a:hover{color:#fff}
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 70% 30%,#2b1a4a 0%,var(--ink2) 40%,var(--ink) 100%);padding:150px 0 120px;text-align:center}
+.stars,.stars2{position:absolute;inset:0;background-repeat:repeat;pointer-events:none}
+.stars{background-image:radial-gradient(1px 1px at 20px 30px,#fff,transparent),radial-gradient(1px 1px at 120px 80px,#fff,transparent),radial-gradient(1.5px 1.5px at 200px 150px,#fff,transparent),radial-gradient(1px 1px at 60px 190px,#cfd6ff,transparent),radial-gradient(1px 1px at 260px 40px,#fff,transparent);background-size:300px 220px;opacity:.7;animation:tw 6s ease-in-out infinite alternate}
+.stars2{background-image:radial-gradient(1px 1px at 50px 100px,#ffd9de,transparent),radial-gradient(2px 2px at 170px 20px,#fff,transparent),radial-gradient(1px 1px at 230px 170px,#fff,transparent);background-size:280px 260px;opacity:.5;animation:tw 9s ease-in-out infinite alternate-reverse}
+@keyframes tw{from{opacity:.3}to{opacity:.85}}
+.hero .glow{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(200,16,46,.35),transparent 65%);left:50%;top:55%;transform:translate(-50%,-50%);pointer-events:none}
+.hero .wrap{position:relative}
+.leaf{width:84px;height:84px;filter:drop-shadow(0 0 24px rgba(230,57,70,.6));margin-bottom:22px}
+.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:.8rem;color:#ffb3bd;margin-bottom:10px}
+h1{font-size:clamp(2.8rem,8vw,5.2rem);line-height:1.05;font-weight:900;letter-spacing:-1px}
+h1 span{color:var(--red2)}
+.tagline{font-size:clamp(1.1rem,2.6vw,1.45rem);color:#e3e6f7;margin:18px auto 34px;max-width:640px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 8px 24px rgba(200,16,46,.4)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff;margin-left:10px}
+section{padding:90px 0}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--ink);margin-bottom:14px;letter-spacing:-.5px}
+.kicker{color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:3px;font-size:.78rem;margin-bottom:8px}
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:center}
+.about p{font-size:1.12rem}
+.host{background:#fff;border-radius:20px;padding:30px;box-shadow:0 12px 40px rgba(11,16,38,.08);border-top:5px solid var(--red);text-align:center}
+.host .av{width:96px;height:96px;border-radius:50%;margin:0 auto 14px;background:linear-gradient(135deg,var(--red),#7a0a1d);display:grid;place-items:center;color:#fff;font-size:2rem;font-weight:800}
+.host small{color:var(--muted)}
+.seg-bg{background:#fff}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+.card{background:var(--cream);border-radius:18px;padding:28px 22px;border:1px solid #f0e6dc;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(11,16,38,.08)}
+.card .ic{width:48px;height:48px;border-radius:12px;background:rgba(200,16,46,.1);display:grid;place-items:center;margin-bottom:16px}
+.card h3{color:var(--ink);font-size:1.1rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
+.ep{position:relative;overflow:hidden;background:var(--ink);color:#fff;border-radius:24px;padding:56px 32px;text-align:center;margin-top:30px}
+.ep h3{font-size:1.7rem;margin-bottom:8px}
+.ep p{color:#c8cce6;margin-bottom:28px}
+.plats{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.plat{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff;text-decoration:none;font-weight:600}
+.plat em{font-style:normal;font-size:.7rem;background:var(--red);padding:2px 8px;border-radius:999px;text-transform:uppercase;letter-spacing:1px}
+.connect{text-align:center}
+.connect p{max-width:560px;margin:0 auto 28px;color:var(--muted);font-size:1.08rem}
+.btn-x{background:#000;color:#fff}
+.btn-outline{border:1.5px solid var(--red);color:var(--red);margin-left:10px}
+.logo-card{display:inline-block;background:#fff;border-radius:22px;padding:14px 22px;box-shadow:0 18px 50px rgba(0,0,0,.45),0 0 0 4px rgba(31,122,58,.35);margin-bottom:22px}
+.logo-card img{display:block;width:min(420px,72vw);height:auto}
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:26px 0 8px;text-align:left}
+.vid{display:block;background:var(--ink2);border-radius:16px;overflow:hidden;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.08);transition:transform .2s}
+.vid:hover{transform:translateY(-4px)}
+.vid .th{position:relative;aspect-ratio:16/9;background:#000}
+.vid .th img{width:100%;height:100%;object-fit:cover;display:block}
+.vid .th:after{content:"▶";position:absolute;inset:0;margin:auto;width:54px;height:38px;border-radius:10px;background:rgba(200,16,46,.92);display:grid;place-items:center;font-size:1rem}
+.vid p{padding:12px 14px 16px;font-size:.92rem;line-height:1.4;font-weight:600}
+.plat.live{border-color:var(--green);background:rgba(31,122,58,.25)}
+.plat.live em{background:var(--green)}
+.btn-yt{background:#ff0000;color:#fff;margin-left:10px}
+footer{background:var(--ink);color:#9aa0c3;text-align:center;padding:30px 0;font-size:.9rem}
+footer a{color:#fff;text-decoration:none}
+@media (max-width:860px){.grid4{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;gap:32px}}
+@media (max-width:560px){.navlinks{display:none}.grid4{grid-template-columns:1fr}.hero{padding:120px 0 90px}section{padding:64px 0}.btn-ghost,.btn-outline{margin-left:0;margin-top:12px}.hero .btn,.connect .btn{width:100%;justify-content:center;max-width:320px}}
+</style>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs><symbol id="maple" viewBox="0 0 100 100"><path fill="currentColor" d="M50 4l-7 14-8-4 4 22-12-12-3 8-14-3 5 14-6 3 21 17-3 9 21-4v28h4V70l21 4-3-9 21-17-6-3 5-14-14 3-3-8-12 12 4-22-8 4z"/></symbol></defs></svg>
+
+<nav><div class="wrap">
+  <a class="logo" href="#"><svg width="28" height="28" style="color:#e63946"><use href="#maple"/></svg>Canada-Verse</a>
+  <div class="navlinks"><a href="#about">About</a><a href="#segments">Segments</a><a href="#episodes">Episodes</a><a href="#connect">Connect</a></div>
+</div></nav>
+
+<header class="hero">
+  <div class="stars"></div><div class="stars2"></div><div class="glow"></div>
+  <div class="wrap">
+    <div class="logo-card"><img src="logo.webp" alt="Canada-Verse logo: red maple leaf with microphone" width="900" height="498"></div>
+    <div class="eyebrow">A podcast from North Vancouver, BC</div>
+    <h1>Canada<span>-</span>Verse</h1>
+    <p class="tagline">Open ideas. Free minds. A better humanity.</p>
+    <a class="btn btn-red" href="#episodes">▶ Listen</a><a class="btn btn-ghost" href="https://x.com/JimmyHLamb" target="_blank" rel="noopener">Follow on X</a>
+  </div>
+</header>
+
+<section id="about"><div class="wrap about">
+  <div class="host"><div class="av">JL</div><h3>Jimmy Lamb</h3><small>Host · North Vancouver, BC</small></div>
+  <div><div class="kicker">About the show</div><h2>Honest, curious conversation.</h2>
+  <p>Canada-Verse is a podcast that opens ideas and frees minds, with one goal: making humanity a better place. Hosted by Jimmy Lamb from North Vancouver, BC, each episode explores the stories, technology, and questions shaping Canada and the world, from news and innovation to the big ideas most people are afraid to ask about. No scripts or talking points, just honest, curious conversation.</p></div>
+</div></section>
+
+<section id="segments" class="seg-bg"><div class="wrap">
+  <div class="kicker">Segments</div><h2>What we talk about</h2>
+  <div class="grid4">
+    <div class="card"><div class="ic"><svg width="24" height="24" style="color:#c8102e"><use href="#maple"/></svg></div><h3>Canadian news, explained</h3><p>The headlines that matter, unpacked without the spin.</p></div>
+    <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div><h3>Tech and the future</h3><p>Blockchain, AI, and the innovations reshaping how we live.</p></div>
+    <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v4"/></svg></div><h3>Guest conversations</h3><p>Open, unscripted talks with interesting people.</p></div>
+    <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><path d="M21 12a8 8 0 01-11.6 7.1L3 21l1.9-6.4A8 8 0 1121 12z"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.9.6-1.5 1-1.5 2M12 16.5v.01"/></svg></div><h3>Listener questions</h3><p>Your questions, answered on air. Nothing's off limits.</p></div>
+  </div>
+</div></section>
+
+<section id="episodes"><div class="wrap">
+  <div class="kicker">Episodes</div><h2>Listen</h2>
+  <div class="ep"><div class="stars"></div>
+    <div style="position:relative"><h3>Latest from the channel</h3><p>Catch the newest videos on YouTube. Podcast feeds are on the way.</p>
+    <div class="vids">
+      <a class="vid" href="https://www.youtube.com/watch?v=McegxpN3s34" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/McegxpN3s34/hqdefault.jpg" alt="" loading="lazy"></div><p>Our brave Doctors were attacked for daring to speak the truth about vaccine injury in Vancouver, BC.</p></a>
+      <a class="vid" href="https://www.youtube.com/watch?v=jQE7d2CBE4g" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/jQE7d2CBE4g/hqdefault.jpg" alt="" loading="lazy"></div><p>B.E.I.N.G.S.</p></a>
+      <a class="vid" href="https://www.youtube.com/watch?v=Ln2b2SD_p6s" target="_blank" rel="noopener"><div class="th"><img src="https://i.ytimg.com/vi/Ln2b2SD_p6s/hqdefault.jpg" alt="" loading="lazy"></div><p>Canada - State Controlled Media Ended Journalism, at a Social Cost.</p></a>
+    </div>
+    <a class="btn btn-red" href="https://www.youtube.com/@jameslamb5885" target="_blank" rel="noopener" style="margin:18px 0 6px">▶ Watch all videos on YouTube</a>
+    <div class="plats">
+      <a class="plat" href="#">Spotify <em>Coming soon</em></a>
+      <a class="plat" href="#">Apple Podcasts <em>Coming soon</em></a>
+      <a class="plat live" href="https://www.youtube.com/@jameslamb5885" target="_blank" rel="noopener">YouTube <em>Watch now</em></a>
+    </div></div></div>
+  </div>
+</div></section>
+
+<section id="connect" class="seg-bg connect"><div class="wrap">
+  <div class="kicker">Connect</div><h2>Got a question for the show?</h2>
+  <p>Send in your questions, ideas, and guest suggestions. The best ones make it on air.</p>
+  <a class="btn btn-x" href="https://x.com/JimmyHLamb" target="_blank" rel="noopener">Follow @JimmyHLamb on X</a><a class="btn btn-yt" href="https://www.youtube.com/@jameslamb5885" target="_blank" rel="noopener">Subscribe on YouTube</a>
+  <!-- TODO: REPLACE with a real email address when ready, e.g.
+       <a class="btn btn-outline" href="mailto:REPLACE-ME@canadaverse.live">Email the show</a>
+       Until then, questions go to X: -->
+  <a class="btn btn-outline" href="https://x.com/JimmyHLamb" target="_blank" rel="noopener">Send your questions on X</a>
+</div></section>
+
+<footer>© 2026 Canada-Verse · <a href="https://canadaverse.live">canadaverse.live</a></footer>
+</body>
+</html>
