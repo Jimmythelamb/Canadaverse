@@ -102,7 +102,7 @@ footer a{color:#fff;text-decoration:none}
 <header class="hero">
   <div class="stars"></div><div class="stars2"></div><div class="glow"></div>
   <div class="wrap">
-    <div class="logo-card" id="logoSpin"><img id="logoSpinImg" src="assets/logo-spin/f00.webp" alt="Canada-Verse logo: red maple leaf with microphone" width="720" height="480" decoding="async" fetchpriority="high"></div>
+    <div class="logo-card" id="logoSpin"><img id="logoSpinImg" src="f00.webp" alt="Canada-Verse logo: red maple leaf with microphone" width="720" height="480" decoding="async" fetchpriority="high"></div>
     <div class="eyebrow">A podcast from North Vancouver, BC</div>
     <h1>Canada<span>-</span>Verse</h1>
     <p class="tagline">Open ideas. Free minds. A better humanity.</p>
@@ -111,15 +111,15 @@ footer a{color:#fff;text-decoration:none}
 </header>
 
 <section id="about"><div class="wrap about">
-  <div class="host"><img class="av" src="assets/jimmy.jpg" alt="Jimmy Lamb, host of Canada-Verse, in a dark suit and patterned tie" width="720" height="540" loading="lazy" decoding="async"><h3>Jimmy Lamb</h3><small>Host · North Vancouver, BC</small></div>
+  <div class="host"><img class="av" src="jimmy.jpg" alt="Jimmy Lamb, host of Canada-Verse, in a dark suit and patterned tie" width="720" height="540" loading="lazy" decoding="async"><h3>Jimmy Lamb</h3><small>Host · North Vancouver, BC</small></div>
   <div><div class="kicker">About the show</div><h2>Honest, curious conversation.</h2>
   <p>Canada-Verse is a podcast that opens ideas and frees minds, with one goal: making humanity a better place. Hosted by Jimmy Lamb from North Vancouver, BC, each episode explores the stories, technology, and questions shaping Canada and the world, from news and innovation to the big ideas most people are afraid to ask about. No scripts or talking points, just honest, curious conversation.</p></div>
 </div></section>
 
 <section id="segments" class="seg-bg"><div class="wrap">
   <div class="seg-head"><div class="seg-title"><div class="kicker">Segments</div><h2>What we talk about</h2></div>
-  <div class="mv-wrap" id="mvWrap"><img class="mv-poster" src="assets/logo-poster.webp" alt="" width="486" height="300" loading="lazy" decoding="async">
-    <model-viewer id="logoModel" src="assets/canadaverse-logo.draco.glb" alt="Interactive 3D model of the Canada-Verse logo: a red maple leaf with a microphone beside the words CANADA and VERSE. Drag to spin it." poster="assets/logo-poster.webp" loading="lazy" reveal="auto" orientation="0deg 90deg 0deg" auto-rotate rotation-per-second="40deg" auto-rotate-delay="0" camera-controls disable-zoom disable-pan interaction-prompt="none" camera-orbit="180deg 84deg 80%" min-field-of-view="20deg" environment-image="neutral" shadow-intensity="0" exposure="1.05"></model-viewer></div></div>
+  <div class="mv-wrap" id="mvWrap"><img class="mv-poster" src="logo-poster.webp" alt="" width="486" height="300" loading="lazy" decoding="async">
+    <model-viewer id="logoModel" src="canadaverse-logo.draco.glb" alt="Interactive 3D model of the Canada-Verse logo: a red maple leaf with a microphone beside the words CANADA and VERSE. Drag to spin it." poster="logo-poster.webp" loading="lazy" reveal="auto" orientation="0deg 90deg 0deg" auto-rotate rotation-per-second="40deg" auto-rotate-delay="0" camera-controls disable-zoom disable-pan interaction-prompt="none" camera-orbit="180deg 84deg 80%" min-field-of-view="20deg" environment-image="neutral" shadow-intensity="0" exposure="1.05"></model-viewer></div></div>
   <div class="grid4">
     <div class="card"><div class="ic"><svg width="24" height="24" style="color:#c8102e"><use href="#maple"/></svg></div><h3>Canadian news, explained</h3><p>The headlines that matter, unpacked without the spin.</p></div>
     <div class="card"><div class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8102e" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></div><h3>Tech and the future</h3><p>Blockchain, AI, and the innovations reshaping how we live.</p></div>
@@ -169,7 +169,7 @@ footer a{color:#fff;text-decoration:none}
   var card=document.getElementById('logoSpin'), img=document.getElementById('logoSpinImg');
   if(!card||!img) return;
   if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return; // keep static front-facing frame
-  var N=60, PX_PER_TURN=1000, base='assets/logo-spin/f', frames=[], loaded=0, canvas, ctx, ready=false;
+  var N=60, PX_PER_TURN=1000, base='f', frames=[], loaded=0, canvas, ctx, ready=false;
   var cur=0, target=0, raf=0, visible=true, lastShown=-1;
   function name(i){return base+(i<10?'0':'')+i+'.webp';}
   function size(){
