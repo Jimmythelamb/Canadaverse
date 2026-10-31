@@ -225,5 +225,13 @@ footer a{color:#fff;text-decoration:none}
   if('IntersectionObserver' in window) new IntersectionObserver(function(e,o){ if(e[0].isIntersecting){load();o.disconnect();} },{rootMargin:'400px'}).observe(wrap); else load();
 })();
 </script>
+<script>
+/* Auto-load latest YouTube uploads; the three links above stay as a fallback. */
+(function(){var box=document.querySelector('#episodes .vids');if(!box||!window.fetch)return;
+fetch('/.netlify/functions/latest-videos').then(function(r){return r.ok?r.json():null}).then(function(v){
+if(!v||!v.length)return;box.innerHTML='';v.forEach(function(x){var a=document.createElement('a');a.className='vid';a.target='_blank';a.rel='noopener';
+a.href='https://www.youtube.com/watch?v='+x.id;var d=document.createElement('div');d.className='th';var i=document.createElement('img');i.src='https://i.ytimg.com/vi/'+x.id+'/hqdefault.jpg';i.alt='';i.loading='lazy';d.appendChild(i);
+var p=document.createElement('p');p.textContent=x.title;a.appendChild(d);a.appendChild(p);box.appendChild(a);});}).catch(function(){});})();
+</script>
 </body>
 </html>
